@@ -17,11 +17,11 @@ void deletionAtHead(node* &head){ // deleted at head
 }
 void deletion(node* &head, int vlaue){ // deleted at tail
     node* temp = head;
-    while (temp->next->data!=NULL)
+    while (temp->next->data!=value)
     {
         temp = temp->next;
     }
-    node* todeleted = temp;
+    node* todeleted = temp->next;
     temp->next = temp->next->next;
 
     delete todeleted;
